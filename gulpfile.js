@@ -15,7 +15,6 @@ const gulp         = require('gulp'),
       cache        = require('gulp-cache'),            // Подключаем библиотеку кеширования
       webpack = require("webpack-stream");             // webpack
 
-
 gulp.task('clean', function(done) {
   return del.sync('build'),
   done();
@@ -58,7 +57,8 @@ gulp.task('image', function() {
 gulp.task('copy', function() {
   return gulp.src([
     'source/fonts/**/*',
-    'source/icons/**/*'
+    'source/icons/**/*',
+    'source/*.ico'
   ], {
     base: 'source'
   })
