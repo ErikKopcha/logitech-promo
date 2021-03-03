@@ -1,3 +1,19 @@
-.main__inner {
-  @include inner;
+.heading-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.productive {
+  padding-top: 90px;
+
+  img {
+    margin-bottom: 70px;
+  }
+
+  .productive__arrow-down {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite ease-in;
+  }
 }

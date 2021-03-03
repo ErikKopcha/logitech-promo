@@ -19,22 +19,3 @@
   list-style: none;
 }
 
-@mixin button-style {
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1;
-  color: $color-button;
-  cursor: pointer;
-  border: none;
-  transition: $transition;
-
-  &:hover {
-    color: #ffffff;
-    background-color: $color-active;
-  }
-
-  &:active {
-    color: $color-active;
-  }
-}

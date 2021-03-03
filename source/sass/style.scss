@@ -1,3 +1,4 @@
+// base
 @import "base/mixins";
 @import "base/variables.scss";
 @import "base/layout";
@@ -7,20 +8,5 @@
 @import "blocks/main";
 @import "blocks/footer";
 
-.d-none {
-    display: none !important;
-}
-
-.d-flex {
-    display: flex;
-}
-
-.align-center {
-    align-items: center;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-
+// additional
+@import "additional/additional";

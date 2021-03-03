@@ -86,17 +86,30 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./source/js/components/component.js":
-/*!*******************************************!*\
-  !*** ./source/js/components/component.js ***!
-  \*******************************************/
+/***/ "./source/js/components/setFullScreen.js":
+/*!***********************************************!*\
+  !*** ./source/js/components/setFullScreen.js ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-let numberOne = 1;
-/* harmony default export */ __webpack_exports__["default"] = (numberOne);
+class SetFullScreenSection {
+  constructor(sectionClass, headerClass) {
+    this.section = document.querySelector(`.${sectionClass}`);
+    this.header = document.querySelector(`.${headerClass}`);
+
+    this._setHeight();
+  }
+
+  _setHeight() {
+    this.section.style.minHeight = `calc(100vh - ${this.header.offsetHeight}px)`;
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SetFullScreenSection);
 
 /***/ }),
 
@@ -109,9 +122,9 @@ let numberOne = 1;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/component */ "./source/js/components/component.js");
+/* harmony import */ var _components_setFullScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/setFullScreen */ "./source/js/components/setFullScreen.js");
 
-console.log(_components_component__WEBPACK_IMPORTED_MODULE_0__["default"]);
+const fullScreenSection = new _components_setFullScreen__WEBPACK_IMPORTED_MODULE_0__["default"]('productive', 'header');
 
 /***/ })
 

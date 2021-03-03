@@ -1,3 +1,3 @@
-import numberOne from './components/component';
+import SetFullScreenSection from './components/setFullScreen';
 
-console.log(numberOne);
+const fullScreenSection = new SetFullScreenSection('productive', 'header');

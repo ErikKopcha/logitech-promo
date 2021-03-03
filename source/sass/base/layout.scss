@@ -1,27 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
-// @font-face {
-//   font-family: "Roboto", "Arial", sans-serif;
-//   src:
-//     url("../fonts/Roboto-Light.woff2") format("woff2"),
-//     url("../fonts/Roboto-Light.woff") format("woff"),
-//     url("../fonts/Roboto-Light.ttf") format("ttf");
-//   font-weight: 300;
-//   font-style: normal;
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: "Roboto", "Arial", sans-serif;
-//   src:
-//     url("../fonts/Roboto-Regular.woff2") format("woff2"),
-//     url("../fonts/Roboto-Regular.woff") format("woff"),
-//     url("../fonts/Roboto-Regular.ttf") format("ttf");
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-// }
-
 html {
   box-sizing: border-box;
 }
@@ -56,6 +34,7 @@ body {
   font-style: normal;
   font-size: 16px;
   color: $color-default;
+  background-color: $color-default-bg;
 }
 
 a {
@@ -63,8 +42,15 @@ a {
   color: inherit;
 }
 
-ul li {
+ul, li {
   @include reset-list;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
 }
 
 ::placeholder {
