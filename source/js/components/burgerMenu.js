@@ -6,7 +6,6 @@ class BurgerMenu {
     this.arrowAnimate = document.querySelector('.productive__arrow-down');
 
     this._triggers();
-    this._removeAnimation(); // fix z-index (keyframe)
   }
 
   _triggers() {
@@ -40,14 +39,6 @@ class BurgerMenu {
         }
       });
     }
-  }
-
-  _removeAnimation() {
-    window.addEventListener('scroll', (e) => {
-      if (window.scrollY > 350) {
-        if (this.arrowAnimate) { this.arrowAnimate.style.animation = `none`; }
-      } else { if (this.arrowAnimate) { this.arrowAnimate.style.animation = `bounce 2s infinite ease-in`; } }
-    });
   }
 }
 
