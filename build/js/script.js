@@ -86,6 +86,88 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./source/js/components/burgerMenu.js":
+/*!********************************************!*\
+  !*** ./source/js/components/burgerMenu.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+class BurgerMenu {
+  constructor(btnId) {
+    this.btnBurger = document.getElementById(btnId);
+    this.header = document.querySelector('.header__logo');
+    this.navSmall = document.querySelector('.nav-small');
+    this.arrowAnimate = document.querySelector('.productive__arrow-down');
+
+    this._triggers();
+
+    this._removeAnimation(); // fix z-index (keyframe)
+
+  }
+
+  _triggers() {
+    if (this.btnBurger) {
+      this.btnBurger.addEventListener('click', e => {
+        e.preventDefault();
+
+        if (this.btnBurger.classList.contains('open')) {
+          document.body.style.overflow = 'hidden';
+
+          if (this.header && this.navSmall) {
+            this.header.setAttribute('src', 'icons/logo-white.svg');
+            this.navSmall.style.cssText = `left: 0%`;
+          }
+
+          if (this.arrowAnimate) {
+            this.arrowAnimate.style.animation = `none`;
+          }
+
+          ;
+          this.btnBurger.classList.add('close');
+          this.btnBurger.classList.remove('open');
+        } else {
+          document.body.style.overflow = '';
+
+          if (this.header && this.navSmall) {
+            this.header.setAttribute('src', 'icons/logo.svg');
+            this.navSmall.style.cssText = `left: 100%`;
+          }
+
+          setTimeout(() => {
+            if (this.arrowAnimate && window.scrollY < 350) {
+              this.arrowAnimate.style.animation = `bounce 2s infinite ease-in`;
+            }
+          }, 400);
+          this.btnBurger.classList.remove('close');
+          this.btnBurger.classList.add('open');
+        }
+      });
+    }
+  }
+
+  _removeAnimation() {
+    window.addEventListener('scroll', e => {
+      if (window.scrollY > 350) {
+        if (this.arrowAnimate) {
+          this.arrowAnimate.style.animation = `none`;
+        }
+      } else {
+        if (this.arrowAnimate) {
+          this.arrowAnimate.style.animation = `bounce 2s infinite ease-in`;
+        }
+      }
+    });
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (BurgerMenu);
+
+/***/ }),
+
 /***/ "./source/js/components/setFullScreen.js":
 /*!***********************************************!*\
   !*** ./source/js/components/setFullScreen.js ***!
@@ -123,8 +205,11 @@ class SetFullScreenSection {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_setFullScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/setFullScreen */ "./source/js/components/setFullScreen.js");
+/* harmony import */ var _components_burgerMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/burgerMenu */ "./source/js/components/burgerMenu.js");
+
 
 const fullScreenSection = new _components_setFullScreen__WEBPACK_IMPORTED_MODULE_0__["default"]('productive', 'header');
+const burgerMenu = new _components_burgerMenu__WEBPACK_IMPORTED_MODULE_1__["default"]('burger-menu');
 
 /***/ })
 

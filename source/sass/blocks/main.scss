@@ -5,7 +5,8 @@
 }
 
 .productive {
-  padding-top: 90px;
+  padding: 90px 30px 0 30px;
+  background-color: $color-gray-bg;
 
   img {
     margin-bottom: 70px;
@@ -15,5 +16,37 @@
     margin-top: 80px;
     margin-bottom: 20px;
     animation: bounce 2s infinite ease-in;
+  }
+}
+
+.bluetooth {
+  padding: 45px 0 20px 0;
+  background-color: #EDEDED;
+
+  .bluetooth__head {
+    margin-bottom: 30px;
+  }
+
+  .bluetooth__image {
+    margin-bottom: 27px;
+  }
+
+  .bluetooth__title {
+    margin-bottom: 20px;
+  }
+
+  .bluetooth__text-desc {
+    padding: 0 10px;
+  }
+}
+
+.big-txt {
+  font-size: 60px;
+  text-transform: uppercase;
+  color: $color-dark-gray;
+  font-weight: 900;
+
+  span {
+
   }
 }
