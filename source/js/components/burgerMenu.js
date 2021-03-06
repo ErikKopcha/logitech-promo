@@ -8,6 +8,43 @@ class BurgerMenu {
     this._triggers();
   }
 
+  _navigationEvents() {
+    if (this.navSmall) {
+      this.navSmall.addEventListener('click', (e) => {
+        if (this.btnBurger) {
+          this.btnBurger.click();
+        }
+
+         switch (e.target.dataset.nav) {
+           case 'bluetooth':
+             this._scrollToElement(document.querySelector('[data-section="bluetooth"]'));
+             break;
+           case 'landscape':
+             this._scrollToElement(document.querySelector('[data-section="landscape"]'));
+             break;
+           case 'multi':
+             this._scrollToElement(document.querySelector('[data-section="multi"]'));
+             break;
+           case 'individual':
+             this._scrollToElement(document.querySelector('[data-section="individual"]'));
+             break;
+           case 'fast':
+             this._scrollToElement(document.querySelector('[data-section="fast"]'));
+             break;
+           case 'comfort':
+             this._scrollToElement(document.querySelector('[data-section="comfort"]'));
+             break;
+         }
+      });
+    }
+  }
+
+  _scrollToElement(element) {
+    try {
+      element.scrollIntoView({block: "center", behavior: "smooth"});
+    } catch (err) { console.warn(err); }
+  }
+
   _triggers() {
     if (this.btnBurger) {
       this.btnBurger.addEventListener('click', (e) => {
@@ -39,6 +76,8 @@ class BurgerMenu {
         }
       });
     }
+
+    this._navigationEvents();
   }
 }
 

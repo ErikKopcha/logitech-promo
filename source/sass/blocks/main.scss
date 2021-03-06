@@ -228,6 +228,10 @@ section {
   padding: 60px 0;
   background-color: $color-gray-2-bg;
 
+  .multi__lifestyle-img {
+    width: 100%;
+  }
+
   .multi__title, .multi__desc-text, .multi__list  {
     padding: 0 20px;
   }
