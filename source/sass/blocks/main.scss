@@ -121,12 +121,40 @@
     }
   }
 }
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 15px;
+  transform: scale(0);
+  border-radius: 50%;
+
+  width: 40px;
+  height: 40px;
+
+  background-image: url(../../icons/arrow-up.svg);
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: center center;
+  background-color: #ffdd7c;
+
+  transition: $transition;
+}
 // end components //
 
 // sections //
 section {
   padding: 60px 0;
 }
+
 .productive {
   padding: 90px 30px 0 30px;
   background-color: $color-gray-bg;

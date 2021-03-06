@@ -195,6 +195,49 @@ class BurgerMenu {
 
 /***/ }),
 
+/***/ "./source/js/components/butttonScrollTop.js":
+/*!**************************************************!*\
+  !*** ./source/js/components/butttonScrollTop.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+class ButtonScrollTop {
+  constructor(buttonId) {
+    this.buttonScrollTop = document.getElementById(buttonId);
+
+    if (!this.buttonScrollTop) {
+      console.error('button is not defined');
+      return;
+    }
+
+    this._triggers();
+  }
+
+  _triggers() {
+    window.addEventListener('scroll', e => {
+      if (window.scrollY > 350) {
+        this.buttonScrollTop.style.transform = `scale(1)`;
+      } else {
+        this.buttonScrollTop.style.transform = `scale(0)`;
+      }
+    });
+    this.buttonScrollTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ButtonScrollTop);
+
+/***/ }),
+
 /***/ "./source/js/components/setFullScreen.js":
 /*!***********************************************!*\
   !*** ./source/js/components/setFullScreen.js ***!
@@ -234,12 +277,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_setFullScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/setFullScreen */ "./source/js/components/setFullScreen.js");
 /* harmony import */ var _components_burgerMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/burgerMenu */ "./source/js/components/burgerMenu.js");
 /* harmony import */ var _components_arrowDownEvent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/arrowDownEvent */ "./source/js/components/arrowDownEvent.js");
+/* harmony import */ var _components_butttonScrollTop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/butttonScrollTop */ "./source/js/components/butttonScrollTop.js");
+
 
 
 
 const fullScreenSection = new _components_setFullScreen__WEBPACK_IMPORTED_MODULE_0__["default"]('productive', 'header');
 const burgerMenu = new _components_burgerMenu__WEBPACK_IMPORTED_MODULE_1__["default"]('burger-menu');
 const arrowDownEvent = new _components_arrowDownEvent__WEBPACK_IMPORTED_MODULE_2__["default"]('productive__arrow-down');
+const buttonScrollTop = new _components_butttonScrollTop__WEBPACK_IMPORTED_MODULE_3__["default"]('scroll-top-btn');
 
 /***/ })
 
