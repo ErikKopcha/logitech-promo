@@ -20,11 +20,6 @@ class ArrowDownEvent {
       this.arrowAnimate.addEventListener('click', (e) => {
         e.preventDefault();
         this.scrollToElem.scrollIntoView({block: "center", behavior: "smooth"});
-
-        // window.scrollTo({
-        //   top: 1000,
-        //   behavior: "smooth"
-        // });
       });
     }
   }

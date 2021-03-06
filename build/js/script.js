@@ -119,10 +119,7 @@ class ArrowDownEvent {
         this.scrollToElem.scrollIntoView({
           block: "center",
           behavior: "smooth"
-        }); // window.scrollTo({
-        //   top: 1000,
-        //   behavior: "smooth"
-        // });
+        });
       });
     }
   }
