@@ -1,3 +1,9 @@
-.footer__inner {
-  @include inner;
+.footer {
+  padding: 22px 10px 40px 10px;
+  background-color: $color-default;
+
+  p {
+    font-size: 7px;
+    color: white;
+  }
 }
