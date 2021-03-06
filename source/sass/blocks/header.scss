@@ -1,11 +1,8 @@
 .header {
   background-color: $color-gray-bg;
-  //position: sticky;
-  //top: 0;
-  //left: 0;
 
   .header__inner {
-    //position: sticky;
+    position: sticky;
     padding: 25px 0;
     z-index: 999;
 
@@ -18,7 +15,7 @@
 }
 
 .burger-menu {
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 25px;
   display: block;
