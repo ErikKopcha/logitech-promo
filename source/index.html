@@ -16,7 +16,20 @@
 
   <header class="header">
     <div class="header__inner">
-      <img class="header__logo" src="icons/logo.svg" width="130" height="40" alt="">
+      <picture>
+        <source class="m-centered header__logo" media="(min-width: 1280px)" srcset="./icons/logo-white.svg">
+        <img class="m-centered header__logo" width="130" src="./icons/logo.svg" alt="logo">
+      </picture>
+      <nav>
+        <ul>
+          <li data-nav="bluetooth">Работайте Без проводов</li>
+          <li data-nav="landscape">где угодно</li>
+          <li data-nav="comfort">с комфортом</li>
+          <li data-nav="multi">с разных устройств</li>
+          <li data-nav="individual">в любое время</li>
+          <li data-nav="fast">и еще быстрее</li>
+        </ul>
+      </nav>
     </div>
 
     <button id="burger-menu" class="burger-menu open">
@@ -46,35 +59,40 @@
         <div class="productive__head">
           <h2 class="productive__title heading-text">Работайте продуктивнее</h2>
           <picture>
-            <source class="m-centered" media="(min-width: 768px)" srcset="images/tablet-mx-master-1.png, images/tablet-mx-master-1_retina.png 2x">
-            <source class="m-centered" media="(min-width: 1024px)" srcset="images/tablet-hor-mx-master-1.png, images/tablet-hor-mx-master-1_retina.png 2x">
-            <source class="m-centered" media="(min-width: 1920px)" srcset="images/desktop-mx-master-1.png, images/desktop-mx-master-1_retina.png 2x">
-            <img class="m-centered" srcset="images/mx-master-1.png, images/mx-master-1_retina.png 2x" alt="mx master">
+            <source class="m-centered" media="(min-width: 768px)" srcset="./images/tablet-mx-master-1.png, ./images/tablet-mx-master-1_retina.png 2x">
+            <source class="m-centered" media="(min-width: 1024px)" srcset="./images/tablet-hor-mx-master-1.png, ./images/tablet-hor-mx-master-1_retina.png 2x">
+            <source class="m-centered" media="(min-width: 1920px)" srcset="./images/desktop-mx-master-1.png, ./images/desktop-mx-master-1_retina.png 2x">
+            <img class="m-centered" srcset="./images/mx-master-1.png, ./images/mx-master-1_retina.png 2x" alt="mx master">
           </picture>
         </div>
         <p class="ta-c">Создана для эффективной работы, программирования и творчества</p>
-        <img class="productive__arrow-down m-centered" src="icons/arrow-down.svg" width="40" height="20" alt="arrow down">
+        <img class="productive__arrow-down m-centered" src="./icons/arrow-down.svg" width="40" height="20" alt="arrow down">
       </section>
 
       <section data-section="bluetooth" class="bluetooth">
         <div class="bluetooth__head d-flex align-center justify-center flex-column">
-          <img class="bluetooth__image" src="icons/icon-bluetooth.svg" width="18" height="34" alt="icon bluetooth">
+          <img class="bluetooth__image" src="./icons/icon-bluetooth.svg" width="18" height="34" alt="icon bluetooth">
           <h2 class="bluetooth__title heading-text">Без проводов</h2>
           <p class="bluetooth__text-desc ta-c">
             Беспроводная мышь MX Master 3 работает без проводов до нескольких месяцев. Вы закроете приоритетные задачи прежде, чем понадобится подзарядка.
           </p>
         </div>
-        <div class="bluetooth__desc big-txt d-flex justify-center">
-          <span>70</span>
-          &nbsp;
-          <span>дней</span>
+        <div class="bluetooth__desc big-txt d-flex justify-center align-center flex-column">
+          <p>
+            <span>70</span>
+            &nbsp;
+            <span>дней</span>
+          </p>
+          <div class="d-flex align-center justify-center">
+            <img class="m-centered bluetooth__desk_image bluetooth__desk_image--new" srcset="./images/tablet-mx-master-3.png, ./images/tablet-mx-master-3.png 2x" alt="mx master">
+            <picture>
+              <source class="m-centered bluetooth__desk_image" media="(min-width: 768px)" srcset="./images/tablet-mx-master-2.png, ./images/tablet-mx-master-2_retina.png 2x">
+              <source class="m-centered bluetooth__desk_image" media="(min-width: 1024px)" srcset="./images/tablet-hor-mx-master-2.png, ./images/tablet-hor-mx-master-2_retina.png 2x">
+              <source class="m-centered bluetooth__desk_image" media="(min-width: 1920px)" srcset="./images/desktop-mx-master-2.png, ./images/desktop-mx-master-2_retina.png 2x">
+              <img class="m-centered bluetooth__desk_image" srcset="./images/mx-master-2.png, ./images/mx-master-2_retina.png 2x" alt="mx master">
+            </picture>
+          </div>
         </div>
-        <picture>
-          <source class="m-centered" media="(min-width: 768px)" srcset="images/tablet-mx-master-2.png, images/tablet-mx-master-2_retina.png 2x">
-          <source class="m-centered" media="(min-width: 1024px)" srcset="images/tablet-hor-mx-master-2.png, images/tablet-hor-mx-master-2_retina.png 2x">
-          <source class="m-centered" media="(min-width: 1920px)" srcset="images/desktop-mx-master-2.png, images/desktop-mx-master-2_retina.png 2x">
-          <img class="m-centered" srcset="images/mx-master-2.png, images/mx-master-2_retina.png 2x" alt="mx master">
-        </picture>
       </section>
 
       <section data-section="landscape" class="landscape">
@@ -99,37 +117,37 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <picture>
-                <source class="m-centered" media="(min-width: 768px)" srcset="images/tablet-slider-mx-1.jpg, images/tablet-slider-mx-1_retina.jpg 2x">
-                <source class="m-centered" media="(min-width: 1024px)" srcset="images/desktop-slider-mx-1.jpg, images/desktop-slider-mx-1_retina.jpg 2x">
-                <img class="m-centered" srcset="images/slider-mx-1.jpg, images/slider-mx-1_retina.jpg 2x" alt="mx master">
+                <source class="m-centered" media="(min-width: 768px)" srcset="./images/tablet-slider-mx-1.jpg, ./images/tablet-slider-mx-1_retina.jpg 2x">
+                <source class="m-centered" media="(min-width: 1024px)" srcset="./images/desktop-slider-mx-1.jpg, ./images/desktop-slider-mx-1_retina.jpg 2x">
+                <img class="m-centered" srcset="./images/slider-mx-1.jpg, ./images/slider-mx-1_retina.jpg 2x" alt="mx master">
               </picture>
             </div>
             <div class="carousel-item">
               <picture>
-                <source class="m-centered" media="(min-width: 768px)" srcset="images/tablet-slider-mx-2.jpg, images/tablet-slider-mx-2_retina.jpg 2x">
-                <source class="m-centered" media="(min-width: 1024px)" srcset="images/desktop-slider-mx-2.jpg, images/desktop-slider-mx-2_retina.jpg 2x">
-                <img class="m-centered" srcset="images/slider-mx-2.jpg, images/slider-mx-2_retina.jpg 2x" alt="mx master">
+                <source class="m-centered" media="(min-width: 768px)" srcset="./images/tablet-slider-mx-2.jpg, ./images/tablet-slider-mx-2_retina.jpg 2x">
+                <source class="m-centered" media="(min-width: 1024px)" srcset="./images/desktop-slider-mx-2.jpg, ./images/desktop-slider-mx-2_retina.jpg 2x">
+                <img class="m-centered" srcset="./images/slider-mx-2.jpg, ./images/slider-mx-2_retina.jpg 2x" alt="mx master">
               </picture>
             </div>
             <div class="carousel-item">
               <picture>
-                <source class="m-centered" media="(min-width: 768px)" srcset="images/tablet-slider-mx-3.jpg, images/tablet-slider-mx-3_retina.jpg 2x">
-                <source class="m-centered" media="(min-width: 1024px)" srcset="images/desktop-slider-mx-3.jpg, images/desktop-slider-mx-3_retina.jpg 2x">
-                <img class="m-centered" srcset="images/slider-mx-3.jpg, images/slider-mx-3_retina.jpg 2x" alt="mx master">
+                <source class="m-centered" media="(min-width: 768px)" srcset="./images/tablet-slider-mx-3.jpg, ./images/tablet-slider-mx-3_retina.jpg 2x">
+                <source class="m-centered" media="(min-width: 1024px)" srcset="./images/desktop-slider-mx-3.jpg, ./images/desktop-slider-mx-3_retina.jpg 2x">
+                <img class="m-centered" srcset="./images/slider-mx-3.jpg, ./images/slider-mx-3_retina.jpg 2x" alt="mx master">
               </picture>
             </div>
             <div class="carousel-item">
               <picture>
-                <source class="m-centered" media="(min-width: 768px)" srcset="images/tablet-slider-mx-4.jpg, images/tablet-slider-mx-4_retina.jpg 2x">
-                <source class="m-centered" media="(min-width: 1024px)" srcset="images/desktop-slider-mx-4.jpg, images/desktop-slider-mx-4_retina.jpg 2x">
-                <img class="m-centered" srcset="images/slider-mx-4.jpg, images/slider-mx-4_retina.jpg 2x" alt="mx master">
+                <source class="m-centered" media="(min-width: 768px)" srcset="./images/tablet-slider-mx-4.jpg, ./images/tablet-slider-mx-4_retina.jpg 2x">
+                <source class="m-centered" media="(min-width: 1024px)" srcset="./images/desktop-slider-mx-4.jpg, ./images/desktop-slider-mx-4_retina.jpg 2x">
+                <img class="m-centered" srcset="./images/slider-mx-4.jpg, ./images/slider-mx-4_retina.jpg 2x" alt="mx master">
               </picture>
             </div>
             <div class="carousel-item">
               <picture>
-                <source class="m-centered" media="(min-width: 768px)" srcset="images/tablet-slider-mx-5.jpg, images/tablet-slider-mx-5_retina.jpg 2x">
-                <source class="m-centered" media="(min-width: 1024px)" srcset="images/desktop-slider-mx-5.jpg, images/desktop-slider-mx-5_retina.jpg 2x">
-                <img class="m-centered" srcset="images/slider-mx-5.jpg, images/slider-mx-5_retina.jpg 2x" alt="mx master">
+                <source class="m-centered" media="(min-width: 768px)" srcset="./images/tablet-slider-mx-5.jpg, ./images/tablet-slider-mx-5_retina.jpg 2x">
+                <source class="m-centered" media="(min-width: 1024px)" srcset="./images/desktop-slider-mx-5.jpg, ./images/desktop-slider-mx-5_retina.jpg 2x">
+                <img class="m-centered" srcset="./images/slider-mx-5.jpg, ./images/slider-mx-5_retina.jpg 2x" alt="mx master">
               </picture>
             </div>
           </div>
@@ -175,16 +193,18 @@
           <ol class="multi__list">
             <li>1. Нажмите и удерживайте
               папку, чтобы переместить её</li>
+            <li class="multi__list-separator"></li>
             <li>2. Перенесите папку на любой
               из соседних экранов</li>
+            <li class="multi__list-separator"></li>
             <li>3. Да, всё так просто!</li>
           </ol>
-<!--          <picture>-->
-<!--            <source class="m-centered" media="(min-width: 768px)" srcset="images/lifes, images/tablet-slider-mx-5_retina.jpg 2x">-->
-<!--            <source class="m-centered" media="(min-width: 1024px)" srcset="images/desktop-slider-mx-5.jpg, images/desktop-slider-mx-5_retina.jpg 2x">-->
-<!--            <img class="m-centered" srcset="images/mx-master-5.png, images/mx-master-5_retina.png 2x" alt="mx master">-->
-<!--          </picture>-->
-<!--          <img class="multi__lifestyle-img" src="images/lifestyle.jpg" alt="lifestyle">-->
+          <picture>
+            <source class="m-centered" media="(min-width: 768px)" srcset="./images/tablet-lifestyle.jpg, ./images/tablet-lifestyle_retina.jpg 2x">
+            <source class="m-centered" media="(min-width: 1024px)" srcset="./images/tablet-hor-lifestyle.jpg, ./images/tablet-hor-lifestyle_retina.jpg 2x">
+            <source class="m-centered" media="(min-width: 1920px)" srcset="./images/desktop-lifestyle.jpg, ./images/High_Resolution_super4x.jpg 4x">
+            <img class="m-centered" srcset="./images/lifestyle.jpg, ./images/lifestyle_retina.jpg 2x" alt="mx master">
+          </picture>
         </div>
       </section>
 
@@ -198,39 +218,43 @@
           </p>
         </div>
 
+        <div class="individual__full-info">
+          <img class="m-centered d-block w-100" srcset="./images/tablet-individual-full.png, ./images/tablet-individual-full_retina.png 2x" alt="mx master">
+        </div>
+
         <div id="carouselExampleIndicators-individual" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner carousel-inner-individual">
             <div class="carousel-item active">
               <picture>
-                <source class="m-centered d-block w-100" media="(min-width: 768px)" srcset="images/tablet-slider-individual-1.png, images/tablet-slider-individual-1_retina.png 2x">
-                <img class="m-centered d-block w-100" srcset="images/slider-individual-1.png, images/slider-individual-1_retina.png 2x" alt="mx master">
+                <source class="m-centered d-block w-100" media="(min-width: 768px)" srcset="./images/tablet-slider-individual-1.png, ./images/tablet-slider-individual-1_retina.png 2x">
+                <img class="m-centered d-block w-100" srcset="./images/slider-individual-1.png, ./images/slider-individual-1_retina.png 2x" alt="mx master">
               </picture>
             </div>
             <div class="carousel-item">
               <picture>
-                <source class="m-centered d-block w-100" media="(min-width: 768px)" srcset="images/tablet-slider-individual-2.png, images/tablet-slider-individual-2_retina.png 2x">
-                <img class="m-centered d-block w-100" srcset="images/slider-individual-2.png, images/slider-individual-2_retina.png 2x" alt="mx master">
+                <source class="m-centered d-block w-100" media="(min-width: 768px)" srcset="./images/tablet-slider-individual-2.png, ./images/tablet-slider-individual-2_retina.png 2x">
+                <img class="m-centered d-block w-100" srcset="./images/slider-individual-2.png, ./images/slider-individual-2_retina.png 2x" alt="mx master">
               </picture>
             </div>
             <div class="carousel-item">
               <picture>
-                <source class="m-centered d-block w-100" media="(min-width: 768px)" srcset="images/tablet-slider-individual-3.png, images/tablet-slider-individual-3_retina.png 2x">
-                <img class="m-centered d-block w-100" srcset="images/slider-individual-3.png, images/slider-individual-3_retina.png 2x" alt="mx master">
+                <source class="m-centered d-block w-100" media="(min-width: 768px)" srcset="./images/tablet-slider-individual-3.png, ./images/tablet-slider-individual-3_retina.png 2x">
+                <img class="m-centered d-block w-100" srcset="./images/slider-individual-3.png, ./images/slider-individual-3_retina.png 2x" alt="mx master">
               </picture>            </div>
             <div class="carousel-item">
               <picture>
-                <source class="m-centered d-block w-100" media="(min-width: 768px)" srcset="images/tablet-slider-individual-4.png, images/tablet-slider-individual-4_retina.png 2x">
-                <img class="m-centered d-block w-100" srcset="images/slider-individual-4.png, images/slider-individual-4_retina.png 2x" alt="mx master">
+                <source class="m-centered d-block w-100" media="(min-width: 768px)" srcset="./images/tablet-slider-individual-4.png, ./images/tablet-slider-individual-4_retina.png 2x">
+                <img class="m-centered d-block w-100" srcset="./images/slider-individual-4.png, ./images/slider-individual-4_retina.png 2x" alt="mx master">
               </picture>            </div>
             <div class="carousel-item">
               <picture>
-                <source class="m-centered d-block w-100" media="(min-width: 768px)" srcset="images/tablet-slider-individual-5.png, images/tablet-slider-individual-5_retina.png 2x">
-                <img class="m-centered d-block w-100" srcset="images/slider-individual-5.png, images/slider-individual-5_retina.png 2x" alt="mx master">
+                <source class="m-centered d-block w-100" media="(min-width: 768px)" srcset="./images/tablet-slider-individual-5.png, ./images/tablet-slider-individual-5_retina.png 2x">
+                <img class="m-centered d-block w-100" srcset="./images/slider-individual-5.png, ./images/slider-individual-5_retina.png 2x" alt="mx master">
               </picture>            </div>
             <div class="carousel-item">
               <picture>
-                <source class="m-centered d-block w-100" media="(min-width: 768px)" srcset="images/tablet-slider-individual-6.png, images/tablet-slider-individual-6_retina.png 2x">
-                <img class="m-centered d-block w-100" srcset="images/slider-individual-6.png, images/slider-individual-6_retina.png 2x" alt="mx master">
+                <source class="m-centered d-block w-100" media="(min-width: 768px)" srcset="./images/tablet-slider-individual-6.png, ./images/tablet-slider-individual-6_retina.png 2x">
+                <img class="m-centered d-block w-100" srcset="./images/slider-individual-6.png, ./images/slider-individual-6_retina.png 2x" alt="mx master">
               </picture>            </div>
           </div>
 
@@ -247,51 +271,60 @@
       </section>
 
       <section data-section="apps" class="apps">
-        <div class="apps__images">
-          <img src="icons/photoshop.svg" alt="app">
-          <img src="icons/pr.svg" alt="app">
-          <img src="icons/browsers.svg" alt="app">
-          <img src="icons/word.svg" alt="app">
-          <img src="icons/powerP.svg" alt="app">
-          <img src="icons/excel.svg" alt="app">
-          <img src="icons/final-cut.svg" alt="app">
-        </div>
+        <div class="apps__inner">
+          <div class="apps__images">
+            <img src="./icons/photoshop.svg" alt="app">
+            <img src="./icons/pr.svg" alt="app">
+            <img src="./icons/browsers.svg" alt="app">
+            <img src="./icons/word.svg" alt="app">
+            <img src="./icons/powerP.svg" alt="app">
+            <img src="./icons/excel.svg" alt="app">
+            <img src="./icons/final-cut.svg" alt="app">
+          </div>
 
           <div class="apps__desk">
             Начните работать продуктивнее с момента покупки — устройство
             предварительно оптимизировано под популярные приложения
             на Windows и Mac.
           </div>
+        </div>
       </section>
 
       <section data-section="comfort" class="comfort">
-        <div class="comfort__head">
-          <h2 class="individual__title heading-text">КОМФОРТНО. ЭРГОНОМИЧНО. ИНТУИТИВНО.</h2>
-        </div>
-
-        <p class="comfort__desk">
-          Дизайн мыши MX Master 3 разработан так, чтобы с точностью повторять форму вашей ладони. Но не менее важны колесико прокрутки для большого пальца
-          и расположение кнопок жестов, с которыми вы будете творить уверенно как никогда.
-        </p>
-
-        <div class="comfort__image">
-          <img src="images/High_Resolution.jpg" alt="High_Resolution">
+        <div class="comfort__inner">
+          <div class="comfort__head">
+            <h2 class="individual__title heading-text">КОМФОРТНО. ЭРГОНОМИЧНО. ИНТУИТИВНО.</h2>
+            <p class="comfort__desk">
+              Дизайн мыши MX Master 3 разработан так, чтобы с точностью повторять форму вашей ладони. Но не менее важны колесико прокрутки для большого пальца
+              и расположение кнопок жестов, с которыми вы будете творить уверенно как никогда.
+            </p>
+          </div>
+          <div class="comfort__image">
+            <picture>
+              <source class="m-centered" media="(min-width: 768px)" srcset="./images/tablet-High_Resolution.jpg, ./images/tablet-High_Resolution_retina.jpg 2x">
+              <img class="m-centered" srcset="./images/High_Resolution.jpg, ./images/High_Resolution_retina.jpg 2x" alt="mx master">
+            </picture>
+          </div>
         </div>
       </section>
 
       <section data-section="fast" class="fast">
-        <div class="fast__head">
-          <h2 class="fast__title heading-text">БЫСТРЕЕ, ЧЕМ КОГДА-ЛИБО</h2>
-        </div>
+        <div class="fast__inner">
+          <div class="fast__head">
+            <h2 class="fast__title heading-text">БЫСТРЕЕ, ЧЕМ КОГДА-ЛИБО</h2>
+            <p class="fast__desk">
+              Компьютерная мышь MX Master 3 предлагает ультимативный механизм прокрутки
+              со скоростью 1000 строк за 1 секунду.
+              С точностью до пикселя. Бесшумно.
+            </p>
+          </div>
 
-        <p class="fast__desk">
-          Компьютерная мышь MX Master 3 предлагает ультимативный механизм прокрутки
-          со скоростью 1000 строк за 1 секунду.
-          С точностью до пикселя. Бесшумно.
-        </p>
-
-        <div class="fast__image">
-          <img src="images/master-top.jpg" alt="High_Resolution">
+          <div class="fast__image">
+            <picture>
+              <source class="m-centered" media="(min-width: 768px)" srcset="./images/tablet-master-top.jpg, ./images/tablet-master-top_retina.jpg 2x">
+              <img class="m-centered" srcset="./images/master-top.jpg, ./images/master-top_retina.jpg 2x" alt="mx master">
+            </picture>
+          </div>
         </div>
       </section>
 

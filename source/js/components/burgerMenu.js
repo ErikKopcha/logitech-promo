@@ -1,7 +1,8 @@
 class BurgerMenu {
   constructor(btnId) {
     this.btnBurger = document.getElementById(btnId);
-    this.header = document.querySelector('.header__logo');
+    this.header = document.querySelectorAll('.header__logo');
+    this.nav = document.querySelectorAll('nav');
     this.navSmall = document.querySelector('.nav-small');
     this.arrowAnimate = document.querySelector('.productive__arrow-down');
 
@@ -9,34 +10,34 @@ class BurgerMenu {
   }
 
   _navigationEvents() {
-    if (this.navSmall) {
-      this.navSmall.addEventListener('click', (e) => {
-        if (this.btnBurger) {
+    this.nav.forEach(item => {
+      item.addEventListener('click', (e) => {
+        if (this.btnBurger && this.btnBurger.classList.contains('close')) {
           this.btnBurger.click();
         }
 
-         switch (e.target.dataset.nav) {
-           case 'bluetooth':
-             this._scrollToElement(document.querySelector('[data-section="bluetooth"]'));
-             break;
-           case 'landscape':
-             this._scrollToElement(document.querySelector('[data-section="landscape"]'));
-             break;
-           case 'multi':
-             this._scrollToElement(document.querySelector('[data-section="multi"]'));
-             break;
-           case 'individual':
-             this._scrollToElement(document.querySelector('[data-section="individual"]'));
-             break;
-           case 'fast':
-             this._scrollToElement(document.querySelector('[data-section="fast"]'));
-             break;
-           case 'comfort':
-             this._scrollToElement(document.querySelector('[data-section="comfort"]'));
-             break;
-         }
+        switch (e.target.dataset.nav) {
+          case 'bluetooth':
+            this._scrollToElement(document.querySelector('[data-section="bluetooth"]'));
+            break;
+          case 'landscape':
+            this._scrollToElement(document.querySelector('[data-section="landscape"]'));
+            break;
+          case 'multi':
+            this._scrollToElement(document.querySelector('[data-section="multi"]'));
+            break;
+          case 'individual':
+            this._scrollToElement(document.querySelector('[data-section="individual"]'));
+            break;
+          case 'fast':
+            this._scrollToElement(document.querySelector('[data-section="fast"]'));
+            break;
+          case 'comfort':
+            this._scrollToElement(document.querySelector('[data-section="comfort"]'));
+            break;
+        }
       });
-    }
+    });
   }
 
   _scrollToElement(element) {
@@ -50,10 +51,10 @@ class BurgerMenu {
       this.btnBurger.addEventListener('click', (e) => {
         e.preventDefault();
         if (this.btnBurger.classList.contains('open')) {
-          document.body.style.overflow = 'hidden';
+          document.body.style.overflowY = 'hidden';
 
           if (this.header && this.navSmall) {
-            this.header.setAttribute('src', 'icons/logo-white.svg');
+            this.header.forEach(el => el.setAttribute('src', 'icons/logo-white.svg'));
             this.navSmall.style.cssText = `left: 0%`;
           }
 
@@ -62,10 +63,10 @@ class BurgerMenu {
           this.btnBurger.classList.add('close');
           this.btnBurger.classList.remove('open');
         } else {
-          document.body.style.overflow = '';
+          document.body.style.overflowY= '';
 
           if (this.header && this.navSmall) {
-            this.header.setAttribute('src', 'icons/logo.svg');
+            this.header.forEach(el => el.setAttribute('src', 'icons/logo.svg'));
             this.navSmall.style.cssText = `left: 100%`;
           }
 
